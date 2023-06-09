@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { ContentWrapper, LayoutWrapper } from './Layout.styles';
 
 type LayoutProps = {
   navigation: ReactNode;
@@ -7,9 +8,9 @@ type LayoutProps = {
 
 export const Layout = ({ navigation, content }: LayoutProps) => {
   return (
-    <div>
+    <LayoutWrapper>
       <div>{navigation}</div>
-      <div>{content}</div>
-    </div>
+      <ContentWrapper>{content}</ContentWrapper>
+    </LayoutWrapper>
   );
 };
