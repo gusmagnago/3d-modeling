@@ -7,7 +7,7 @@ export const Navigation = () => {
   return (
     <div>
       {navItems.map(({ name, link }) => (
-        <div>
+        <div key={name}>
           <a href={link}>{name}</a>
         </div>
       ))}
