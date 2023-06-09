@@ -88,6 +88,9 @@ Plot as many cube shapes as possible until resource exchaustion.
 - React-Three/Drei
 - Leva
 
+## Try it out!
+
+<a href="https://3d-modeling.vercel.app/" target="_blank">3d Model</a>
 
 #### Thank you!
 
