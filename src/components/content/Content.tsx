@@ -1,6 +1,6 @@
-import { useMemo } from 'react';
+import { Suspense, useMemo } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+import { OrbitControls, Preload } from '@react-three/drei';
 import { useControls } from 'leva';
 
 import Scene from '../scene/Scene';
@@ -42,20 +42,27 @@ const Content = () => {
         camera={{
           position: [5, 5, 5],
         }}
+        frameloop='demand'
       >
-        <color attach='background' args={[darkMode ? '#2b2b38' : '#e2e2e2']} />
-        <OrbitControls />
-        <Scene gridHelper={gridHelper} axesHelper={axesHelper}>
-          <Box
-            scale={1.5}
-            wireframe={wireframe}
-            color={color}
-            particlesCount={particles}
-            opacity={opacity}
-            transparency={transparency}
-            particlesColor={particlesColor}
+        <Suspense fallback={null}>
+          <color
+            attach='background'
+            args={[darkMode ? '#2b2b38' : '#e2e2e2']}
           />
-        </Scene>
+          <Scene gridHelper={gridHelper} axesHelper={axesHelper}>
+            <Box
+              scale={1.5}
+              wireframe={wireframe}
+              color={color}
+              particlesCount={particles}
+              opacity={opacity}
+              transparency={transparency}
+              particlesColor={particlesColor}
+            />
+          </Scene>
+          <Preload all />
+        </Suspense>
+        <OrbitControls />
       </Canvas>
     </>
   );
