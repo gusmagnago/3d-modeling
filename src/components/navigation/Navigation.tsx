@@ -1,16 +1,18 @@
+import { Link, NavigationWrapper } from '../layout/Layout.styles';
+
 export const Navigation = () => {
   const navItems: { name: string; link: string }[] = [
-    { name: 'item 1', link: '' },
-    { name: 'item 2', link: '' },
+    { name: 'Home', link: '/' },
+    { name: 'Model', link: '/' },
   ];
 
   return (
-    <div>
+    <NavigationWrapper>
       {navItems.map(({ name, link }) => (
-        <div key={name}>
+        <Link key={name}>
           <a href={link}>{name}</a>
-        </div>
+        </Link>
       ))}
-    </div>
+    </NavigationWrapper>
   );
 };
