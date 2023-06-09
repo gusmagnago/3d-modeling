@@ -1,46 +1,94 @@
-# Getting Started with Create React App
+# 3d Model visualization
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A 3d Model visualization project where the user can interact with the model view
 
-## Available Scripts
+## Setup
 
-In the project directory, you can run:
+### Install dependencies
 
-### `yarn start`
+Once you've cloned the repository install the required dependencies:
 
-Runs the app in the development mode.\
+```sh
+yarn 
+```
+
+## Run
+
+### Development server
+
+To run the project in development mode run:
+
+```sh
+yarn start
+```
+
+
+## To Visit App:
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## Project structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The directory structure is the following:
 
-### `yarn build`
+```sh
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+├── public
+├── src
+│   ├── components
+│   │   └──── box
+|   |   └──── content
+|   |   |   └──── GameMessage.styles.tsx
+|   |   |   └──── GameMessage.tsx
+|   |   |   └──── GameMessage.types.ts
+|   |   └──── layout
+|   |   └──── navigation
+|   |   └──── particles
+|   |   |   └──── Particles.tsx
+|   |   |   └──── particle
+|   |   |   |   └──── Particle.tsx
+│   ├── App.tsx
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## General Information
 
-### `yarn eject`
+Implement a SPA style web application using Angular or React showing two views:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Left side for Navigation view (menu) and
+- right side for Content view
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3D plot
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Implement a dynamic 3D plot in the Content view.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- See example: https://vimeo.com/829320936
+- Optionally - implement orbital view controls as shown on video.
+- 3D plot has to be dynamic though - moving. So orbital controls can be simulated with an alogorithm.
+  - The number of shapes on the plot is required to be user definable via an UI element.
 
-## Learn More
+### Performance
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Plot as many cube shapes as possible until resource exchaustion.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Plot is required to handle at least 100K shapes.
+- Good performance is if plot handles 1M+ shapes.
+- Excellent performance if 10M+ shapes.
+
+
+## Technologies Used
+
+- JavaScript
+- React
+- Typescript
+- Styled-Components
+- Three.js 
+- React-Three/Fiber
+- React-Three/Drei
+- Leva
+
+
+#### Thank you!
+
+###
