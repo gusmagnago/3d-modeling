@@ -39,9 +39,6 @@ The directory structure is the following:
 │   ├── components
 │   │   └──── box
 |   |   └──── content
-|   |   |   └──── GameMessage.styles.tsx
-|   |   |   └──── GameMessage.tsx
-|   |   |   └──── GameMessage.types.ts
 |   |   └──── layout
 |   |   └──── navigation
 |   |   └──── particles
@@ -56,8 +53,8 @@ The directory structure is the following:
 
 Implement a SPA style web application using Angular or React showing two views:
 
-- Left side for Navigation view (menu) and
-- right side for Content view
+- Left side for Navigation view (menu)
+- Right side for Content view
 
 ### 3D plot
 
